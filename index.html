@@ -1,0 +1,280 @@
+a<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christmas Countdown for Kids – Sleeps, Santa’s Sleigh &amp; Letter to Santa</title>
+<meta name="description" content="A fun Christmas countdown for kids: see how many sleeps are left, follow Santa’s sleigh, discover your elf name and write a printable letter to Santa – free and ad-free.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Christmas Countdown for Kids – Sleeps, Santa’s Sleigh &amp; Letter to Santa">
+<meta property="og:description" content="Count the sleeps, find your elf name and write to Santa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebApplication",
+      "name":"Christmas Countdown for Kids",
+      "applicationCategory":"LifestyleApplication",
+      "operatingSystem":"Browser",
+      "inLanguage":"en",
+      "description":"Kid-friendly Christmas countdown with sleeps left, Santa’s sleigh progress, an elf name generator and a printable letter to Santa.",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"How do I explain the countdown to young children?","acceptedAnswer":{"@type":"Answer","text":"Counting sleeps is easier for young children than counting days. Each morning, check the number together – when it says one sleep, Christmas is tomorrow."}},
+        {"@type":"Question","name":"Is the letter to Santa sent anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. The letter is created and printed in your own browser and nothing is sent or saved online. Many families post the printed letter, pop it in the fireplace or leave it out on Christmas Eve."}},
+        {"@type":"Question","name":"How does the elf name generator work?","acceptedAnswer":{"@type":"Answer","text":"Your elf name is made from the first letter of your name and the month of your birthday, so it is always the same – you can share it and compare with friends and family."}},
+        {"@type":"Question","name":"When should we write a letter to Santa?","acceptedAnswer":{"@type":"Answer","text":"Many families write their letter at the start of December so there is plenty of time before Christmas Eve. If you want a reply through a national post office programme, check their deadline, which is often in early December."}},
+        {"@type":"Question","name":"What is Santa called in other countries?","acceptedAnswer":{"@type":"Answer","text":"He is Père Noël in France, Babbo Natale in Italy and Sinterklaas in the Netherlands. In parts of Germany and Austria the Christkind brings the presents, and in Russia it is Ded Moroz."}},
+        {"@type":"Question","name":"Is this page safe for kids?","acceptedAnswer":{"@type":"Answer","text":"Yes. There are no ads, no sign-ups and no chat features, and everything children type stays on the device."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="hd">
+  <div class="wrap hd-in">
+    <a href="#" class="logo" aria-label="Christmas Countdown for Kids home">
+      <span class="logo-ic" aria-hidden="true">🎅</span>
+      <span>Sleeps<b>till</b>Santa</span>
+    </a>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('.nav').classList.toggle('open')"><span></span><span></span></button>
+    <nav class="nav">
+      <a href="#" class="cur">Countdown</a>
+      <a href="#letter">Letter to Santa</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="sky">
+  <div class="clouds" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap sky-in">
+    <div class="sky-text">
+      <span class="pill" id="pill">🎄 Christmas is on a Friday this year</span>
+      <h1>How many <span>sleeps</span> till Santa comes?</h1>
+      <p>Count down every bedtime, watch Santa’s sleigh get closer and get ready with your very own elf name. Grown-ups: for a no-frills daily <a href="https://christmasdaysleft.com/">christmas countdown</a> you can check at a glance, take a look at ChristmasDaysLeft.</p>
+    </div>
+    <div class="big-count" aria-live="polite">
+      <div class="bauble"><b id="sleeps">50</b><span id="sleeps-l">sleeps to go!</span></div>
+      <div class="mini">
+        <div><b id="m-d">49</b><span>days</span></div>
+        <div><b id="m-h">08</b><span>hours</span></div>
+        <div><b id="m-m">00</b><span>mins</span></div>
+        <div><b id="m-s">00</b><span>secs</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLEIGH JOURNEY -->
+  <div class="wrap journey">
+    <div class="j-card">
+      <div class="j-top"><h2>Santa’s sleigh tracker</h2><b id="j-pct">86%</b></div>
+      <svg viewBox="0 0 1000 200" class="j-map" aria-label="Santa’s sleigh travelling from the North Pole to your home">
+        <path id="j-path" d="M60 150 C 220 20, 380 190, 520 90 S 800 30, 930 140" class="j-route"/>
+        <path id="j-done" d="M60 150 C 220 20, 380 190, 520 90 S 800 30, 930 140" class="j-route-done"/>
+        <g transform="translate(60 150)"><circle r="26" class="pole"/><text y="7" text-anchor="middle" font-size="26">❄️</text></g>
+        <g transform="translate(930 140)"><circle r="28" class="home"/><text y="9" text-anchor="middle" font-size="28">🏠</text></g>
+        <g id="sleigh"><text text-anchor="middle" y="10" font-size="42" transform="scale(-1 1)">🛷</text></g>
+      </svg>
+      <div class="j-labels"><span>North Pole</span><span id="j-msg">Santa is checking his list…</span><span>Your home</span></div>
+    </div>
+  </div>
+  <div class="ground" aria-hidden="true"></div>
+</section>
+
+<main>
+  <!-- ===== ELF NAME ===== -->
+  <section class="sec wrap elf">
+    <div class="elf-text">
+      <p class="kick">Just for fun</p>
+      <h2>What’s your elf name?</h2>
+      <p>Every helper at the North Pole has an elf name. Type your first name and pick your birthday month to find yours – and the job Santa has given you!</p>
+      <div class="elf-form">
+        <input type="text" id="e-name" placeholder="Your first name" maxlength="20" autocomplete="off" aria-label="First name">
+        <select id="e-month" aria-label="Birthday month">
+          <option value="">Birthday month</option>
+          <option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option>
+          <option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option>
+        </select>
+      </div>
+    </div>
+    <div class="elf-card" id="elf-card" aria-live="polite">
+      <span class="elf-hat" aria-hidden="true">🧝</span>
+      <p class="elf-pre">Your elf name is</p>
+      <h3 id="e-out">Jolly Sleighbell</h3>
+      <p class="elf-job" id="e-job">Chief Cookie Taster</p>
+      <p class="elf-note" id="e-note">Type your name to begin</p>
+    </div>
+  </section>
+
+  <!-- ===== LETTER ===== -->
+  <section class="sec wrap" id="letter">
+    <div class="sec-head"><p class="kick">Dear Santa…</p><h2>Write your letter to Santa</h2>
+    <p>Fill in the boxes and watch your letter appear. When it looks just right, print it out, sign it and leave it somewhere Santa (or his elves) will find it.</p></div>
+    <div class="letter-grid">
+      <form class="l-form" onsubmit="return false">
+        <label><span>Your name</span><input type="text" id="l-name" maxlength="24" placeholder="e.g. Ava"></label>
+        <label><span>Your age</span><input type="number" id="l-age" min="1" max="15" placeholder="7"></label>
+        <label class="wide"><span>This year I was good because…</span><input type="text" id="l-good" maxlength="80" placeholder="I helped Grandma bake cookies"></label>
+        <label class="wide"><span>Wish number 1</span><input type="text" id="l-w1" maxlength="40" placeholder="A red bike"></label>
+        <label class="wide"><span>Wish number 2</span><input type="text" id="l-w2" maxlength="40" placeholder="A dinosaur book"></label>
+        <label class="wide"><span>Wish number 3</span><input type="text" id="l-w3" maxlength="40" placeholder="Snow on Christmas Day"></label>
+        <label class="wide"><span>A wish for someone else</span><input type="text" id="l-other" maxlength="60" placeholder="That my brother gets his football"></label>
+        <div class="wide paper-pick"><span>Paper</span>
+          <div class="papers" id="l-paper"><button type="button" data-p="candy" class="on">🍭 Candy</button><button type="button" data-p="snow">❄️ Snowy</button><button type="button" data-p="gold">⭐ Starry</button></div>
+        </div>
+        <div class="wide l-btns">
+          <button type="button" class="btn red" id="l-print">🖨 Print my letter</button>
+          <button type="button" class="btn ghost" id="l-clear">Start again</button>
+        </div>
+      </form>
+      <div class="letter candy" id="letter-paper" aria-live="polite">
+        <div class="l-stamp" aria-hidden="true">🎅</div>
+        <p class="l-to">Santa Claus<br>Workshop Lane<br>The North Pole</p>
+        <p class="l-date" id="lp-date"></p>
+        <div class="l-body" id="lp-body"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SANTA AROUND THE WORLD ===== -->
+  <section class="sec wrap">
+    <div class="sec-head center"><p class="kick">Hello from everywhere</p><h2>What is Santa called around the world?</h2></div>
+    <div class="names">
+      <article><span>🇫🇷</span><b>Père Noël</b><p>France – children leave shoes by the fireplace.</p></article>
+      <article><span>🇮🇹</span><b>Babbo Natale</b><p>Italy – and on January 6, the kind witch La Befana brings sweets.</p></article>
+      <article><span>🇳🇱</span><b>Sinterklaas</b><p>Netherlands – he arrives by boat and visits on December 5.</p></article>
+      <article><span>🇩🇪</span><b>Christkind</b><p>Parts of Germany and Austria – a golden-haired gift-bringer.</p></article>
+      <article><span>🇷🇺</span><b>Ded Moroz</b><p>Russia – “Grandfather Frost”, with his granddaughter Snegurochka.</p></article>
+      <article><span>🇧🇷</span><b>Papai Noel</b><p>Brazil – Christmas is in summer, so he may wear lighter clothes!</p></article>
+    </div>
+  </section>
+
+  <!-- ===== ACTIVITIES ===== -->
+  <section class="sec wrap">
+    <div class="sec-head center"><p class="kick">Busy little elves</p><h2>Christmas countdown activities for kids</h2></div>
+    <div class="acts">
+      <div class="act a1"><b>Make</b><p>Paper snowflakes, salt-dough ornaments and a paper chain with one link for every sleep.</p></div>
+      <div class="act a2"><b>Bake</b><p>Gingerbread people, reindeer cookies and a mug of hot chocolate with marshmallows.</p></div>
+      <div class="act a3"><b>Give</b><p>Draw a card for a neighbour, donate a toy and help wrap presents for the family.</p></div>
+      <div class="act a4"><b>Read</b><p>One Christmas story every night – old favourites and new ones from the library.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="sec wrap">
+    <div class="sec-head center"><p class="kick">For grown-ups</p><h2>Parents’ questions</h2></div>
+    <div class="faq">
+      <details open><summary>How do I explain the countdown to young children?</summary><p>Counting sleeps is easier for young children than counting days. Each morning, check the number together – when it says one sleep, Christmas is tomorrow.</p></details>
+      <details><summary>Is the letter to Santa sent anywhere?</summary><p>No. The letter is created and printed in your own browser and nothing is sent or saved online. Many families post the printed letter, pop it in the fireplace or leave it out on Christmas Eve.</p></details>
+      <details><summary>How does the elf name generator work?</summary><p>Your elf name is made from the first letter of your name and the month of your birthday, so it is always the same – you can share it and compare with friends and family.</p></details>
+      <details><summary>When should we write a letter to Santa?</summary><p>Many families write their letter at the start of December so there is plenty of time before Christmas Eve. If you want a reply through a national post office programme, check their deadline, which is often in early December.</p></details>
+      <details><summary>What is Santa called in other countries?</summary><p>He is Père Noël in France, Babbo Natale in Italy and Sinterklaas in the Netherlands. In parts of Germany and Austria the Christkind brings the presents, and in Russia it is Ded Moroz.</p></details>
+      <details><summary>Is this page safe for kids?</summary><p>Yes. There are no ads, no sign-ups and no chat features, and everything children type stays on the device.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="ft" id="contact">
+  <div class="wrap ft-in">
+    <div>
+      <span class="logo light"><span class="logo-ic" aria-hidden="true">🎅</span><span>Sleeps<b>till</b>Santa</span></span>
+      <p>A happy Christmas countdown for kids and families.</p>
+    </div>
+    <nav>
+      <a href="#">Countdown</a>
+      <a href="#letter">Letter to Santa</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy</a>
+    </nav>
+  </div>
+  <p class="wrap ft-copy">© <span id="yr"></span> Sleeps till Santa · Ho ho ho!</p>
+</footer>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id);};
+  var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function pad(n){return String(n).padStart(2,'0');}
+  function dOnly(d){return new Date(d.getFullYear(),d.getMonth(),d.getDate());}
+  function xYear(n){return (n.getMonth()===11&&n.getDate()>25)?n.getFullYear()+1:n.getFullYear();}
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+
+  /* ---------- Countdown + sleigh ---------- */
+  var path=$('j-path'), done=$('j-done'), L=path.getTotalLength();
+  done.style.strokeDasharray=L;
+  function tick(){
+    var n=new Date(), y=xYear(n), t=new Date(y,11,25), isX=n.getMonth()===11&&n.getDate()===25;
+    var ms=Math.max(0,t-n), s=isX?0:Math.round((t-dOnly(n))/864e5);
+    $('pill').textContent='🎄 Christmas '+y+' is on a '+DAYS[t.getDay()];
+    $('sleeps').textContent=isX?'🎁':s;
+    $('sleeps-l').textContent=isX?'Merry Christmas!':(s===1?'sleep to go!':'sleeps to go!');
+    $('m-d').textContent=Math.floor(ms/864e5); $('m-h').textContent=pad(Math.floor(ms%864e5/36e5)); $('m-m').textContent=pad(Math.floor(ms%36e5/6e4)); $('m-s').textContent=pad(Math.floor(ms%6e4/1e3));
+    var st=new Date(y-1,11,26), pct=isX?1:Math.min(1,Math.max(0,(n-st)/(t-st)));
+    var pt=path.getPointAtLength(L*pct);
+    $('sleigh').setAttribute('transform','translate('+pt.x.toFixed(1)+' '+pt.y.toFixed(1)+')');
+    done.style.strokeDashoffset=L*(1-pct);
+    $('j-pct').textContent=Math.floor(pct*100)+'%';
+    $('j-msg').textContent=isX?'Santa has landed! 🎉':(s<=1?'Santa is on his way tonight!':(s<=7?'The reindeer are warming up…':(s<=24?'The elves are wrapping presents…':'Santa is checking his list…')));
+  }
+
+  /* ---------- Elf name ---------- */
+  var FIRST={A:'Sparkle',B:'Jingle',C:'Twinkle',D:'Snowy',E:'Merry',F:'Frosty',G:'Glitter',H:'Holly',I:'Icicle',J:'Jolly',K:'Kringle',L:'Tinsel',M:'Mistletoe',N:'Nutmeg',O:'Ornament',P:'Peppermint',Q:'Quilly',R:'Ribbon',S:'Sugarplum',T:'Toffee',U:'Upsy',V:'Velvet',W:'Wiggles',X:'Xylo',Y:'Yule',Z:'Zippy'};
+  var LAST=['Snowflake','Gingersnap','Candycane','Cocoabean','Sprinkles','Pinecone','Twinkletoes','Mittens','Starlight','Cookiecrumb','Bellringer','Sleighbell'];
+  var JOBS=['Chief Cookie Taster','Reindeer Snack Chef','Toy Painter','Wrapping Wizard','Sleigh Polisher','Nice List Checker','Snowball Inspector','Jingle Bell Tuner','Stocking Stuffer','Workshop DJ'];
+  function elf(){
+    var nm=$('e-name').value.trim(), mo=$('e-month').selectedIndex-1, L1=(nm.match(/[A-Za-z]/)||[''])[0].toUpperCase();
+    if(!nm){ $('e-out').textContent='Jolly Sleighbell'; $('e-job').textContent='Chief Cookie Taster'; $('e-note').textContent='Type your name to begin'; $('elf-card').classList.remove('done'); return; }
+    if(mo<0){ $('e-note').textContent='Now pick your birthday month'; $('e-out').textContent=(FIRST[L1]||'Jolly')+' …'; $('e-job').textContent='Job coming soon!'; return; }
+    $('e-out').textContent=(FIRST[L1]||'Jolly')+' '+LAST[mo];
+    var sum=0; for(var i=0;i<nm.length;i++) sum+=nm.toLowerCase().charCodeAt(i);
+    $('e-job').textContent=JOBS[(sum+mo)%JOBS.length];
+    $('e-note').textContent='Welcome to the workshop, '+nm+'! ✨';
+    var c=$('elf-card'); c.classList.remove('done'); void c.offsetWidth; c.classList.add('done');
+  }
+  $('e-name').addEventListener('input',elf); $('e-month').addEventListener('change',elf);
+
+  /* ---------- Letter to Santa ---------- */
+  var F=['l-name','l-age','l-good','l-w1','l-w2','l-w3','l-other'];
+  function v(id){return esc($(id).value.trim());}
+  function letter(){
+    var n=new Date();
+    $('lp-date').textContent=n.getDate()+' '+MONTHS[n.getMonth()]+' '+n.getFullYear();
+    var name=v('l-name')||'<span class="ph">your name</span>', age=v('l-age');
+    var wishes=['l-w1','l-w2','l-w3'].map(v).filter(Boolean);
+    var html='<p class="hi">Dear Santa,</p>'
+      +'<p>My name is '+name+(age?' and I am '+age+' years old':'')+'. I hope you and the reindeer are keeping warm at the North Pole!</p>'
+      +'<p>This year I tried really hard to be good. '+(v('l-good')?'I was good because '+v('l-good')+'.':'<span class="ph">Tell Santa why you were good…</span>')+'</p>'
+      +'<p>For Christmas I would love:</p>'
+      +(wishes.length?'<ol>'+wishes.map(function(w){return '<li>'+w+'</li>';}).join('')+'</ol>':'<ol><li class="ph">your first wish</li></ol>')
+      +(v('l-other')?'<p>I also have a wish for someone else: '+v('l-other')+'.</p>':'')
+      +'<p>I will leave out milk and cookies for you and a carrot for Rudolph. Thank you for all your hard work!</p>'
+      +'<p class="sign">Love from,<br><span>'+(v('l-name')||'_____________')+'</span></p>';
+    $('lp-body').innerHTML=html;
+  }
+  F.forEach(function(id){ $(id).addEventListener('input',letter); });
+  document.querySelectorAll('#l-paper button').forEach(function(b){ b.addEventListener('click',function(){ document.querySelectorAll('#l-paper button').forEach(function(x){x.classList.toggle('on',x===b);}); $('letter-paper').className='letter '+b.dataset.p; }); });
+  $('l-print').addEventListener('click',function(){ document.body.classList.add('printing'); window.print(); setTimeout(function(){document.body.classList.remove('printing');},500); });
+  $('l-clear').addEventListener('click',function(){ F.forEach(function(id){ $(id).value=''; }); letter(); });
+
+  document.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){document.querySelector('.nav').classList.remove('open');});});
+  $('yr').textContent=new Date().getFullYear();
+  tick(); setInterval(tick,1000); elf(); letter();
+})();
+</script>
+</body>
+</html>
